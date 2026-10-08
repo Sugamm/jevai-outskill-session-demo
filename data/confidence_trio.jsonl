@@ -1,0 +1,3 @@
+{"id":"c1","title":"Obvious","text":"Hi, my toaster stopped working after two days. Please refund the full amount to my card. Order #T-55812.","gold":"refund_request","difficulty":"easy","reviewed":false}
+{"id":"c2","title":"Borderline","text":"The app keeps crashing, honestly thinking of leaving.","gold":"complaint","difficulty":"hard","note":"Borderline complaint vs cancel_account: they are only thinking of leaving.","reviewed":false}
+{"id":"c3","title":"Ambiguous","text":"Third time the blender arrived cracked. I'm done. Just send my money back and close my account.","gold":"cancel_account","difficulty":"hard","note":"Refund and close in one email; gold follows the tie-break rule in config/task.yaml.","reviewed":false}

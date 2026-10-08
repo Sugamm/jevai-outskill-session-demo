@@ -1,0 +1,11 @@
+# Single source of truth for the classification task.
+# Both Jev and the LLM receive exactly this question and these options.
+question_id: intent
+question: >-
+  What is the customer asking for in this support email for an online appliance store?
+  If the email contains more than one request, choose the most consequential one:
+  cancel_account over refund_request over complaint.
+options:
+  complaint: The customer reports a problem or is unhappy, but does not ask for money back or to close the account.
+  refund_request: The customer asks for money back, a refund, or a reversal of a charge.
+  cancel_account: The customer asks to close, cancel, or delete their account or membership.

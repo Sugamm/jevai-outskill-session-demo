@@ -1,0 +1,4 @@
+{"id":"h1","text":"Oh great, ANOTHER cracked blender, love that for me.","gold":"complaint","difficulty":"hard","hard_type":"sarcasm","reviewed":false}
+{"id":"h2","text":"Refund the blender and also close my account.","gold":"cancel_account","difficulty":"hard","hard_type":"two_requests","note":"Two requests; gold follows the tie-break rule in config/task.yaml (cancel_account over refund_request).","reviewed":false}
+{"id":"h3","text":"Bhai, blender phir se toota hua aaya, paisa wapas karo.","gold":"refund_request","difficulty":"hard","hard_type":"hinglish","note":"Hinglish: 'Brother, the blender arrived broken again, give the money back.'","reviewed":false}
+{"id":"h4","text":"Charged 1,200 and then 2,400 for one order, refund the difference.","gold":"refund_request","difficulty":"hard","hard_type":"arithmetic","reviewed":false}

@@ -1,0 +1,6 @@
+# What the software does with a decision, by confidence.
+# `metric: confidence` is Jev's own confidence field ((p_max - 1/3) / (2/3) for three options);
+# the LLM gets the same formula applied to its self-reported distribution.
+metric: confidence
+auto_act: 0.90 # at or above: act automatically
+ask_confirm: 0.60 # at or above (and below auto_act): ask the user to confirm; below: a human decides

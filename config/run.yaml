@@ -1,0 +1,7 @@
+# Identical for both models.
+concurrency: 10
+# Per-attempt timeout.
+timeout_ms: 60000
+# One retry on timeout, connection error, 408, 429, or 5xx; then the error is recorded.
+max_retries: 1
+retry_backoff_ms: 1000

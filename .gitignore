@@ -1,0 +1,12 @@
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.venv*/
+__pycache__/
+runs/*
+!runs/.gitkeep
+.DS_Store

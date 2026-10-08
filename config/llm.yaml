@@ -1,0 +1,11 @@
+# The frontier LLM under comparison, called through OpenRouter's OpenAI-compatible API
+# using a TypeScript port of TypeSafe's system-one-adapter-python (probabilities mode).
+provider: openrouter
+base_url: https://openrouter.ai/api/v1
+model: openai/gpt-6-astra
+# No reasoning parameter is sent, so the provider's default reasoning setting applies.
+reasoning: provider_default
+
+# Dataset generation uses a different model family than the one being evaluated,
+# so the evaluated LLM is not grading text it wrote itself.
+dataset_generator_model: anthropic/claude-opus-5.5
