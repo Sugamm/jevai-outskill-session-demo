@@ -2,7 +2,8 @@
 # using a TypeScript port of TypeSafe's system-one-adapter-python (probabilities mode).
 provider: openrouter
 base_url: https://openrouter.ai/api/v1
-model: openai/gpt-6-astra
+# gpt-4o: GPT-6 Astra returns OpenAI 403 policy blocks for this OpenRouter key.
+model: openai/gpt-4o
 # No reasoning parameter is sent, so the provider's default reasoning setting applies.
 reasoning: provider_default
 

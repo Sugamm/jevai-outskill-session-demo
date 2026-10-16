@@ -1,6 +1,6 @@
 # USD per million tokens. Cost is always computed from the token counts each API returns.
 # The app warns at startup when `checked_on` is more than 30 days old.
-checked_on: 2026-10-08
+checked_on: 2026-10-16
 
 jev:
   model: jev-latest
@@ -9,9 +9,9 @@ jev:
   output_per_mtok: 0
 
 llm:
-  model: openai/gpt-6-astra
-  source: https://openrouter.ai/api/v1/models (OpenRouter list price, checked 2026-10-08)
-  input_per_mtok: 10.0
-  output_per_mtok: 50.0
+  model: openai/gpt-4o
+  source: https://openrouter.ai/api/v1/models (OpenRouter list price, checked 2026-10-16)
+  input_per_mtok: 2.5
+  output_per_mtok: 10.0
   # Cached prompt tokens are billed at this rate when the API reports them.
-  cached_input_per_mtok: 1.0
+  cached_input_per_mtok: 1.25

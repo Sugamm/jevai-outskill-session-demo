@@ -62,6 +62,13 @@ export async function classify(text: string, options: Record<string, string>, qu
   }
 
   const completion = result.value;
+  // OpenRouter sometimes returns HTTP 200 with an embedded `error` instead of throwing
+  // (e.g. upstream OpenAI 403 policy blocks). Surface that before checking usage/choices.
+  const providerError = (completion as { error?: { message?: string; code?: number | string } }).error;
+  if (providerError?.message) {
+    const code = providerError.code != null ? ` (${providerError.code})` : "";
+    return failed(`${providerError.message}${code}`, { body: completion, provider_reported_cost_usd: null });
+  }
   const u = (completion.usage ?? {}) as OpenRouterUsage;
   const usage = {
     input_tokens: u.prompt_tokens ?? 0,
