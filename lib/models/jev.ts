@@ -4,7 +4,8 @@ import { costUsd } from "../cost";
 import { type Decision, topProbability } from "../decision";
 import { describeError, isRetryableStatus, withRetry } from "../retry";
 
-export const JEV_MODEL = "jev-latest";
+/** Model id from config/pricing.yaml (`jev.model`). The API's resolved id is stored on each decision as `model_version`. */
+export const JEV_MODEL = pricingConfig().jev.model;
 
 let client: TypeSafeClient | null = null;
 function getClient(): TypeSafeClient {
@@ -52,7 +53,11 @@ export async function classify(text: string, options: Record<string, string>, qu
   const { data, requestId } = result.value;
   const answer = data.answers[question_id];
   const probs = { ...answer.probabilities } as Record<string, number>;
-  const usage = { input_tokens: data.usage.input_tokens, output_tokens: data.usage.output_tokens };
+  // SDK 0.7 types these as number | null when the API omits them. Cost uses the reported counts.
+  const usage = {
+    input_tokens: data.usage.input_tokens ?? 0,
+    output_tokens: data.usage.output_tokens ?? 0,
+  };
   return {
     ...base,
     label: answer.choice,
