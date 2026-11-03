@@ -15,7 +15,7 @@
   "type": "module",
   "dependencies": {
     "@typesafe-ai/sdk": "^0.7.0",
-    "next": "^16.4.0",
+    "next": "^16.4.4",
     "openai": "^7.30.1",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
