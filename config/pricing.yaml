@@ -9,9 +9,9 @@ jev:
   output_per_mtok: 0
 
 llm:
-  model: openai/gpt-4o
+  model: anthropic/claude-fable-5.1
   source: https://openrouter.ai/api/v1/models (OpenRouter list price, checked 2026-11-03)
-  input_per_mtok: 2.5
-  output_per_mtok: 10.0
+  input_per_mtok: 10.0
+  output_per_mtok: 50.0
   # Cached prompt tokens are billed at this rate when the API reports them.
-  cached_input_per_mtok: 1.25
+  cached_input_per_mtok: 0.25
